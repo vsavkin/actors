@@ -220,7 +220,7 @@ The library is just a prototype (an experiment) and should not be used in produc
 
 Since the library is built in a day, it’s just a prototype. However, it’d be interesting to work on such a library for real, carefully designing every piece of it. I think it may help the Dart community. 
 
-I'd like to mention that in general the Dart platform is mature and pleasure to work it. The only source of frustration is an incomplete implementation of mirrors. Which I hope won't be fixed soon.
+I'd like to mention that in general the Dart platform is mature and pleasure to work it. The only source of frustration is the incomplete implementation of mirrors. Which I hope will be fixed soon.
 
  
 
