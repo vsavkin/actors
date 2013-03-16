@@ -36,16 +36,16 @@ I'd like to walk you through the implementation of the chat application.
 
 First, we initialize an actor system and start a web server.
 
-   main(){
-     ActorSystemServer.start((system){
-       system.createActor("currentConversation", "server_chat:Conversation");
-       startServer("web", "127.0.0.1", 9988, system.onConnection);
-     });
-   }
+    main(){
+      ActorSystemServer.start((system){
+        system.createActor("currentConversation", "server_chat:Conversation");
+        startServer("web", "127.0.0.1", 9988, system.onConnection);
+      });
+    }
 
 Creating an actor is done as follows:
 
-   system.createActor("currentConversation", "server_chat:Conversation");
+    system.createActor("currentConversation", "server_chat:Conversation");
 
 The createActor function creates an actor and returns an instance of ActorRef. You never talk to an actor directly; you use an ActorRef instead. The createActor function creates an object in the current isolate.
 
@@ -218,11 +218,9 @@ The library is just a prototype (an experiment) and should not be used in produc
 
 ## Further Work
 
-Since the library is built in a day, it’s just a prototype. However, it’d be interesting to work on such a library for real, carefully designing every piece of it. I think it’ll help the Dart community. If anyone is interested in working on it, please, let me know.
+Since the library is built in a day, it’s just a prototype. However, it’d be interesting to work on such a library for real, carefully designing every piece of it. I think it may help the Dart community. 
 
-## Notes on the Dart Platform
-
-Another goal of this project was to see how mature the Dart platform is. Our main source of frustration was an incomplete implementation of mirrors. Which I hope won't be a problem in the near future.
+I'd like to mention that in general the Dart platform is mature and pleasure to work it. The only source of frustration is an incomplete implementation of mirrors. Which I hope won't be fixed soon.
 
  
 
