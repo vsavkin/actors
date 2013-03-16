@@ -1,0 +1,6 @@
+name: actors
+dependencies:
+  unittest: any
+  browser: any
+  uuid: any
+  vint: any
