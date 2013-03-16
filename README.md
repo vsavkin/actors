@@ -128,7 +128,7 @@ Similarly to the server, we start with creating an actor system.
       }
     }
 
-The ChatApp is a coordinator managing all the interactions.
+ChatApp is a coordinator managing all the interactions.
 
 * EventBus, ChatView, and RegisterForm are used to render the UI. They have nothing to do with the actor library.  You can ignore them.
 * When a user joins the current conversation, the ChatApp object will create a new Participant actor for that user. Then, it’ll add it to the Conversation actor.
@@ -179,7 +179,7 @@ This is the most interesting one. I can have an ActorRef to an actor "living" in
 
 It's definitely not the best idea to mix all the types of communication in one object. It makes this object harder to understand. Here it's done to show that you can communicate with an actor living on the same machine, on the server, or on a different machine in the same way. It allows you to change the communication patterns in a very agile way.
 
-For instance, I could have added sendPrivateMessage to the Conversation actor, so the Participant class will look like this:
+For instance, I can add sendPrivateMessage to the Conversation actor, so the Participant class will look like this:
 
     class Participant {
       ....
@@ -188,9 +188,9 @@ For instance, I could have added sendPrivateMessage to the Conversation actor, s
       }
     }
 
-By doing that I've replaced the `Browser->Browser` pattern with `Browser->Server`.
+By doing that I'll replace the `Browser->Browser` pattern with `Browser->Server`.
 
-Or I could have implemented broadcasting on the client side as follows:
+Or I can implement broadcasting on the client side as follows:
 
     class Participant {
       ....
@@ -201,7 +201,7 @@ Or I could have implemented broadcasting on the client side as follows:
       }
     }
  
-By doing that I've replaced the `Browser->Server` pattern with `Browser->Browser`.
+By doing that I'll replace the `Browser->Server` pattern with `Browser->Browser`.
 
 ## What Is Done
 
